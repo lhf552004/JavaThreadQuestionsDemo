@@ -4,7 +4,13 @@ This is for Java Thread questions and demo
 # 问题
 
 ### Runnable and Callable 不同之处
-Callable可以返回结果和抛出异常
+Callable可以返回结果和抛出异常 
+
+用ExecutorService#sumbit返回Future对象
+
+Future.get()获取结果
+
+Demo 15
 
 ### 什么是Java内存模型
 Java内存模型是一组规则和准则，可让Java程序在多个内存体系结构，CPU和操作系统之间确定性地运行。
@@ -139,7 +145,17 @@ Semaphore 字面意思是信号量的意思，它的作用是控制访问特定�
 
 方法 acquire获取线程，release释放线程
 
+Semaphore构造函数参数fair 指示是否按FIFO原则获取permit
+
 [参考](https://www.jianshu.com/p/38630b7dbe73)
+
+[JavaDoc](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Semaphore.html)
+
+Demo 14
+## Synchronized vs Semaphore
+Synchronized allows only one thread of execution to access the resource at the same time. 
+
+Semaphore allows up to n (you get to choose n) threads of execution to access the resource at the same time.
 
 ## Mutex vs Semaphore
 Semaphore can be counted, while mutex can only count to 1.
