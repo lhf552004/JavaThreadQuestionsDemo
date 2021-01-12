@@ -275,3 +275,13 @@ CountDownLatch，Semaphore，CyclicBarrier或Exchanger之类的同步器可简�
 
 ## How do you force to start a Thread in Java?
 不能保证按照指定顺序启动线程
+
+## wait() vs join()
+The wait() and join() methods are used to pause the current thread. The wait() is used in with notify() and notifyAll() methods, but join() is used in Java to wait until one thread finishes its execution.
+wait() is mainly used for shared resources, a thread notifies other waiting thread when a resource becomes free. On the other hand join() is used for waiting a thread to die.
+
+区别：
+1. wait()定义在java.lang.Object，join()定义在java.lang.Thread类
+2. wait()使用在Synchronized语境下，而join不需要
+
+[参考](https://www.geeksforgeeks.org/differences-between-wait-and-join-methods-in-java/)
